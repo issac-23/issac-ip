@@ -8,7 +8,8 @@ footer.appendChild(copyright);
 document.body.appendChild(footer);
 
 const skills = ["Java", "Python", "Git", "HTML/CSS", "React"];
-const skillsSection = document.getElementById("Skills");
+// Matches the lowercase 'skills' id in the HTML
+const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
 for (let i = 0; i < skills.length; i++) {
     const skillItem = document.createElement("li");
