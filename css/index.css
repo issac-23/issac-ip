@@ -1,4 +1,102 @@
 /* --- Global Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #000;
+    margin-top: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #2c2c2c;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Experience Section --- */
+.job {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background-color: #fafafa;
+    border-left: 4px solid #1a1a1a;
+    border-radius: 4px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.job-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.job-date {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.job-desc {
+    margin: 0;
+    color: #444;
+}
+
+/* --- Lesson 7 Skills Flexbox --- */
 #Skills ul {
     display: flex;
     flex-wrap: wrap;
@@ -16,40 +114,62 @@
     font-weight: 600;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-    background-color: #ffffff;
-    border-top: 2px solid #eaeaea;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.job-desc {
-    margin: 0;
-    color: #444;
-}
-
+/* --- Connect Section --- */
 .social-links {
     display: flex;
     flex-direction: column;
     gap: 15px;
     max-width: 400px;
+    padding: 0;
+    list-style: none;
 }
 
+.social-links a {
+    display: block;
+    padding: 0.75rem 2rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    text-align: center;
+}
+
+.social-links a:hover {
+    background-color: #444;
+}
+
+/* --- Lesson 8 Form Styles --- */
 form[name="leave_message"] input,
 form[name="leave_message"] textarea {
     padding: 10px;
     font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
 }
 
 form[name="leave_message"] button {
-    padding: 12px;
+    padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
 }
 
+form[name="leave_message"] button:hover {
+    background-color: #444;
+}
+
+/* --- Messages Section --- */
 #messages ul {
     list-style-type: none;
     padding: 0;
@@ -58,10 +178,12 @@ form[name="leave_message"] button {
 #messages li {
     margin-bottom: 10px;
     padding: 10px;
-}
-
-.social-links a:hover {
-    background-color: #444;
+    background-color: #fafafa;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* --- Lesson 9 Projects Flexbox --- */
@@ -84,4 +206,15 @@ form[name="leave_message"] button {
     font-weight: 600;
     color: #333;
     text-align: center;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    background-color: #ffffff;
+    border-top: 2px solid #eaeaea;
+    color: #666;
+    font-size: 0.9rem;
 }
