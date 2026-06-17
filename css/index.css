@@ -26,8 +26,12 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- Lesson 8 Form Styles --- */
-form[name="leave_message"] {
+.job-desc {
+    margin: 0;
+    color: #444;
+}
+
+.social-links {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -56,8 +60,28 @@ form[name="leave_message"] button {
     padding: 10px;
 }
 
-#messages button {
-    margin-left: 10px;
-    padding: 8px;
-    font-size: 14px;
+.social-links a:hover {
+    background-color: #444;
+}
+
+/* --- Lesson 9 Projects Flexbox --- */
+#Projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+#Projects li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    min-width: 250px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
 }

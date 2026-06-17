@@ -7,6 +7,7 @@ copyright.innerHTML = `\u00A9 Issac Kwan Jan Ip ${thisYear}`;
 footer.appendChild(copyright);
 document.body.appendChild(footer);
 
+// Skills injection
 const skills = ["Java", "Python", "Git", "HTML/CSS", "React"];
 const skillsSection = document.getElementById("Skills");
 const skillsList = skillsSection.querySelector("ul");
@@ -37,6 +38,7 @@ messageForm.addEventListener('submit', function(event) {
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
     removeButton.type = 'button';
+    removeButton.style.marginLeft = '10px';
 
     removeButton.addEventListener('click', function(event) {
         const entry = removeButton.parentNode;
@@ -48,3 +50,35 @@ messageForm.addEventListener('submit', function(event) {
 
     messageForm.reset();
 });
+
+// Lesson 9 Fetch API
+const githubUsername = "issac-23";
+const url = `https://api.github.com/users/${githubUsername}/repos`;
+
+fetch(url)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.json();
+    })
+    .then(repositories => {
+        console.log(repositories);
+        
+        const projectSection = document.getElementById("Projects");
+        const projectList = projectSection.querySelector("ul");
+
+        for (let i = 0; i < repositories.length; i++) {
+            const project = document.createElement("li");
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => {
+        console.error("Error fetching data:", error);
+        
+        const projectSection = document.getElementById("Projects");
+        const errorMessage = document.createElement("p");
+        errorMessage.innerText = "Sorry, we could not load the projects at this time.";
+        projectSection.appendChild(errorMessage);
+    });
