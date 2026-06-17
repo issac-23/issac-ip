@@ -9,8 +9,7 @@ document.body.appendChild(footer);
 
 // Skills injection
 const skills = ["Java", "Python", "Git", "HTML/CSS", "React"];
-// Matches the lowercase 'skills' id in the HTML
-const skillsSection = document.getElementById("skills");
+const skillsSection = document.getElementById("Skills");
 const skillsList = skillsSection.querySelector("ul");
 for (let i = 0; i < skills.length; i++) {
     const skillItem = document.createElement("li");
