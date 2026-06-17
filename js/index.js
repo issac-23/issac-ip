@@ -7,6 +7,7 @@ copyright.innerHTML = `\u00A9 Issac Kwan Jan Ip ${thisYear}`;
 footer.appendChild(copyright);
 document.body.appendChild(footer);
 
+// Skills injection
 const skills = ["Java", "Python", "Git", "HTML/CSS", "React"];
 // Matches the lowercase 'skills' id in the HTML
 const skillsSection = document.getElementById("skills");
@@ -38,6 +39,7 @@ messageForm.addEventListener('submit', function(event) {
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
     removeButton.type = 'button';
+    removeButton.style.marginLeft = '10px';
 
     removeButton.addEventListener('click', function(event) {
         const entry = removeButton.parentNode;
