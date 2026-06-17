@@ -52,8 +52,8 @@ messageForm.addEventListener('submit', function(event) {
 });
 
 // Lesson 9 Fetch API
-const githubUsername = "issac-ip";
-const url = `https://api.github.com/users/${issac-23}/repos`;
+const githubUsername = "issac-23";
+const url = `https://api.github.com/users/${githubUsername}/repos`;
 
 fetch(url)
     .then(response => {
