@@ -67,6 +67,7 @@ fetch(url)
         return response.json();
     })
     .then(repositories => {
+        console.log(repositories);
         const projectSection = document.getElementById("Projects");
         const projectList = projectSection.querySelector("ul");
 
