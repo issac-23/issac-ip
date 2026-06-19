@@ -65,8 +65,13 @@ h2 {
 }
 
 /* --- Experience Section --- */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .job {
-    margin-bottom: 1.5rem;
     padding: 1.25rem;
     background-color: #fafafa;
     border-left: 4px solid #1a1a1a;
