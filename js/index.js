@@ -27,8 +27,6 @@ messageForm.addEventListener('submit', function(event) {
     const usersEmail = event.target.usersEmail.value;
     const usersMessage = event.target.usersMessage.value;
 
-    console.log(usersName, usersEmail, usersMessage);
-
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
@@ -39,6 +37,12 @@ messageForm.addEventListener('submit', function(event) {
     removeButton.innerText = 'remove';
     removeButton.type = 'button';
     removeButton.style.marginLeft = '10px';
+    removeButton.style.padding = '5px 10px';
+    removeButton.style.backgroundColor = '#ff4c4c';
+    removeButton.style.color = '#fff';
+    removeButton.style.border = 'none';
+    removeButton.style.borderRadius = '4px';
+    removeButton.style.cursor = 'pointer';
 
     removeButton.addEventListener('click', function(event) {
         const entry = removeButton.parentNode;
@@ -64,7 +68,6 @@ fetch(url)
     })
     .then(repositories => {
         console.log(repositories);
-        
         const projectSection = document.getElementById("Projects");
         const projectList = projectSection.querySelector("ul");
 
